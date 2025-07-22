@@ -8,9 +8,8 @@ pkg install -y termux-x11-nightly pulseaudio wget
 proot-distro install debian
 mkdir ~/tmp || true
 wget https://github.com/cu233/proot_proc/raw/refs/heads/master/proc.tar.xz
-rm -rf ~/filesystems || true
-mkdir ~/filesystems
-tar xf proc.tar.xz -C ~/filesystems
+rm -r ~/filesystems || true
+tar xf proc.tar.xz /usr/local/etc/tmoe-linux/proot_proc/filesystems -C ~/filesystems
 cat <<EOF | proot-distro login debian --bind ~/filesystems:/proc/filesystems -- /usr/bin/bash
 apt update -y
 apt install sudo adduser -y
