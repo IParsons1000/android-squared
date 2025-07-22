@@ -8,7 +8,7 @@ pkg install -y termux-x11-nightly
 proot-distro install debian
 cat <<EOF | proot-distro login debian -- /usr/bin/bash
 apt update -y
-apt install sudo adduser
+apt install sudo adduser -y
 adduser asq
 usermod -a -G sudo asq
 echo 'asq    ALL=(ALL:ALL) ALL' >> /etc/sudoers
