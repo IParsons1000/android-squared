@@ -15,5 +15,7 @@ echo 'asq    ALL=(ALL:ALL) ALL' >> /etc/sudoers
 apt install -y xorg xinit xterm
 echo 'allowed_users = anybody' >>/etc/X11/Xwrapper.config
 apt install -y xwayland weston
+curl https://repo.waydro.id | bash
+apt install waydroid -y
 exit
 EOF
