@@ -24,7 +24,7 @@ mkdir /etc/xdg/weston || true
 touch /etc/xdg/weston/weston.ini || true
 cat <<EOG >>/etc/xdg/weston/weston.ini
 [autolaunch]
-path=/usr/bin/waydroid show-full-ui
+path=/usr/bin/waydroid
 EOG
 exit
 EOF
