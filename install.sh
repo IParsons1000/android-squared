@@ -6,6 +6,7 @@ pkg install -y x11-repo
 pkg install -y termux-x11-nightly pulseaudio wget
 
 proot-distro install debian
+mkdir ~/tmp || true
 wget https://github.com/cu233/proot_proc/raw/refs/heads/master/proc.tar.xz
 rm -rf ~/filesystems || true
 mkdir ~/filesystems
