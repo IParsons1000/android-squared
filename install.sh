@@ -3,7 +3,7 @@
 pkg update -y
 pkg install -y proot proot-distro
 pkg install -y x11-repo
-pkg install -y termux-x11-nightly
+pkg install -y termux-x11-nightly pulseaudio
 
 proot-distro install debian
 cat <<EOF | proot-distro login debian -- /usr/bin/bash
