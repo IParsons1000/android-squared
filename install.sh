@@ -12,6 +12,6 @@ apt install sudo adduser -y
 adduser asq
 usermod -a -G sudo asq
 echo 'asq    ALL=(ALL:ALL) ALL' >> /etc/sudoers
-apt install -y xorg xinit xterm
+apt install -y xorg xinit xterm startx
 exit
 EOF
