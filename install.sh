@@ -6,7 +6,9 @@ pkg install -y x11-repo
 pkg install -y termux-x11-nightly pulseaudio
 
 proot-distro install debian
-cat <<EOF | proot-distro login debian -- /usr/bin/bash
+wget https://github.com/cu233/proot_proc/raw/refs/heads/master/proc.tar.xz
+tar xf proc.tar.xz filesystems
+cat <<EOF | proot-distro login debian --bind ~/filesystems:/proc/filesystems -- /usr/bin/bash
 apt update -y
 apt install sudo adduser -y
 adduser asq
