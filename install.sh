@@ -19,7 +19,7 @@ curl https://repo.waydro.id | bash
 apt install waydroid -y
 cat <<EOF >>/etc/xdg/weston/weston.ini
 [autolaunch]
-path=/usr/bin/waydroid
+path=/usr/bin/waydroid show-full-ui
 EOF
 exit
 EOF
