@@ -14,6 +14,6 @@ usermod -a -G sudo asq
 echo 'asq    ALL=(ALL:ALL) ALL' >> /etc/sudoers
 apt install -y xorg xinit xterm
 echo 'allowed_users = anybody' >>/etc/X11/Xwrapper.config
-apt install -y xwayland
+apt install -y xwayland weston
 exit
 EOF
