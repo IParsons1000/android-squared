@@ -9,7 +9,8 @@ proot-distro install debian
 mkdir ~/tmp || true
 wget https://github.com/cu233/proot_proc/raw/refs/heads/master/proc.tar.xz
 rm -r ~/filesystems || true
-tar xf proc.tar.xz /usr/local/etc/tmoe-linux/proot_proc/filesystems -C ~/filesystems
+tar xf proc.tar.xz /usr/local/etc/tmoe-linux/proot_proc/filesystems --strip-components 5
+cp filesystems ~
 cat <<EOF | proot-distro login debian --bind ~/filesystems:/proc/filesystems -- /usr/bin/bash
 apt update -y
 apt install sudo adduser -y
