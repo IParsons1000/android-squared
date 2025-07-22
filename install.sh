@@ -7,7 +7,7 @@ pkg install -y termux-x11-nightly pulseaudio wget
 
 proot-distro install debian
 wget https://github.com/cu233/proot_proc/raw/refs/heads/master/proc.tar.xz
-tar xf proc.tar.xz filesystems
+tar xf proc.tar.xz -C filesystems
 cat <<EOF | proot-distro login debian --bind ~/filesystems:/proc/filesystems -- /usr/bin/bash
 apt update -y
 apt install sudo adduser -y
