@@ -17,5 +17,9 @@ echo 'allowed_users = anybody' >>/etc/X11/Xwrapper.config
 apt install -y xwayland weston
 curl https://repo.waydro.id | bash
 apt install waydroid -y
+cat <<EOF >>/etc/xdg/weston/weston.ini
+[autolaunch]
+path=/usr/bin/waydroid
+EOF
 exit
 EOF
